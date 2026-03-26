@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUXE — Fluid Linen Blazer</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-left">
+    <a href="#" class="nav-link">Women</a>
+    <a href="#" class="nav-link">Men</a>
+    <a href="#" class="nav-link">New In</a>
+  </div>
+  <a href="index.html" class="logo">LUXE</a>
+  <div class="nav-right">
+    <a href="login.html" class="nav-link">Account</a>
+    <a href="cart.html" class="nav-link">Cart (0)</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a> / <a href="listing.html">Women</a> / Fluid Linen Blazer
+</div>
+
+<!-- PRODUCT DETAIL -->
+<div class="product-detail">
+
+  <!-- GALLERY -->
+  <div class="gallery">
+    <div class="gallery-thumbs">
+      <img src="https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=200&q=80" class="thumb active" onclick="setMain(this.src.replace('w=200','w=900'))">
+      <img src="https://images.unsplash.com/photo-1571513800374-df1bbe650e56?w=200&q=80" class="thumb" onclick="setMain(this.src.replace('w=200','w=900'))">
+      <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=200&q=80" class="thumb" onclick="setMain(this.src.replace('w=200','w=900'))">
+      <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=200&q=80" class="thumb" onclick="setMain(this.src.replace('w=200','w=900'))">
+    </div>
+    <div class="gallery-main">
+      <img id="mainImg" src="https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=900&q=80" alt="Fluid Linen Blazer">
+    </div>
+  </div>
+
+  <!-- PRODUCT INFO -->
+  <div class="product-detail-info">
+    <p class="product-detail-cat">Women / Outerwear</p>
+    <h1 class="product-detail-name">Fluid Linen Blazer</h1>
+    <p class="product-detail-price">₹8,990</p>
+    <p class="product-detail-tax">incl. taxes</p>
+
+    <div class="divider"></div>
+
+    <!-- COLOR -->
+    <div class="option-group">
+      <p class="option-label">Colour: <strong>Ecru</strong></p>
+      <div class="color-swatches">
+        <button class="swatch active" style="background:#c8beb2" title="Ecru"></button>
+        <button class="swatch" style="background:#1a1a1a" title="Black"></button>
+        <button class="swatch" style="background:#7a6a5a" title="Camel"></button>
+      </div>
+    </div>
+
+    <!-- SIZE -->
+    <div class="option-group">
+      <div class="size-label-row">
+        <p class="option-label">Size</p>
+        <a href="#" class="size-guide-link">Size Guide</a>
+      </div>
+      <div class="size-grid">
+        <button class="size-btn">XS</button>
+        <button class="size-btn active">S</button>
+        <button class="size-btn">M</button>
+        <button class="size-btn">L</button>
+        <button class="size-btn">XL</button>
+      </div>
+      <p class="size-note">Only 2 left in S</p>
+    </div>
+
+    <!-- ADD TO CART -->
+    <button class="btn-add-cart" onclick="addToCart()">Add to Cart</button>
+    <button class="btn-wishlist">♡ &nbsp;Add to Wishlist</button>
+
+    <div class="divider"></div>
+
+    <!-- DESCRIPTION -->
+    <div class="product-desc">
+      <button class="desc-toggle open" onclick="toggleDesc(this)">
+        Description <span>−</span>
+      </button>
+      <div class="desc-body">
+        <p>Crafted from 100% premium linen, this oversized blazer embodies understated elegance. The relaxed silhouette and clean lines make it effortlessly versatile — dress it up with tailored trousers or wear it over a slip dress for effortless evening dressing.</p>
+        <ul>
+          <li>100% Linen</li>
+          <li>Dry clean only</li>
+          <li>Relaxed, oversized fit</li>
+          <li>Two front patch pockets</li>
+          <li>Single-button closure</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="product-desc">
+      <button class="desc-toggle" onclick="toggleDesc(this)">
+        Shipping & Returns <span>+</span>
+      </button>
+      <div class="desc-body" style="display:none">
+        <p>Complimentary shipping on all orders above ₹5,000. Standard delivery in 3–5 business days. Free returns within 30 days of purchase.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- YOU MAY ALSO LIKE -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">You May Also Like</h2>
+  </div>
+  <div class="products-grid">
+    <a href="product.html" class="product-card">
+      <div class="product-img-wrap">
+        <img class="img-main" src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=600&q=80" alt="">
+        <img class="img-hover" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="">
+        <button class="quick-view">Quick View</button>
+      </div>
+      <div class="product-info">
+        <p class="product-name">Draped Silk Dress</p>
+        <p class="product-price">₹12,500</p>
+      </div>
+    </a>
+    <a href="product.html" class="product-card">
+      <div class="product-img-wrap">
+        <img class="img-main" src="https://images.unsplash.com/photo-1566206091558-7f218b696731?w=600&q=80" alt="">
+        <img class="img-hover" src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80" alt="">
+        <button class="quick-view">Quick View</button>
+      </div>
+      <div class="product-info">
+        <p class="product-name">Tapered Trousers</p>
+        <p class="product-price">₹5,990</p>
+      </div>
+    </a>
+    <a href="product.html" class="product-card">
+      <div class="product-img-wrap">
+        <img class="img-main" src="https://images.unsplash.com/photo-1521577352947-9bb58764b69a?w=600&q=80" alt="">
+        <img class="img-hover" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80" alt="">
+        <button class="quick-view">Quick View</button>
+      </div>
+      <div class="product-info">
+        <p class="product-name">Pleated Midi Skirt</p>
+        <p class="product-price">₹6,990</p>
+      </div>
+    </a>
+    <a href="product.html" class="product-card">
+      <div class="product-img-wrap">
+        <img class="img-main" src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&q=80" alt="">
+        <img class="img-hover" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80" alt="">
+        <button class="quick-view">Quick View</button>
+      </div>
+      <div class="product-info">
+        <p class="product-name">Structured Wool Coat</p>
+        <p class="product-price">₹22,000</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <p class="footer-brand">LUXE</p>
+      <p class="footer-desc">Elevated essentials for the modern wardrobe.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Shop</p>
+      <a href="#">Women</a><a href="#">Men</a><a href="#">New In</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Help</p>
+      <a href="#">Shipping</a><a href="#">Returns</a><a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 LUXE</p></div>
+</footer>
+
+<script>
+function setMain(src) {
+  document.getElementById('mainImg').src = src;
+  document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+}
+function addToCart() {
+  const btn = document.querySelector('.btn-add-cart');
+  btn.textContent = 'Added to Cart ✓';
+  btn.style.background = '#1a1a1a';
+  btn.style.color = '#fff';
+  setTimeout(() => { btn.textContent = 'Add to Cart'; btn.style.background = ''; btn.style.color = ''; }, 2000);
+}
+function toggleDesc(btn) {
+  const body = btn.nextElementSibling;
+  const isOpen = body.style.display !== 'none';
+  body.style.display = isOpen ? 'none' : 'block';
+  btn.querySelector('span').textContent = isOpen ? '+' : '−';
+}
+document.querySelectorAll('.size-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.size-grid').querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
