@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUXE — Checkout</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav nav--checkout">
+  <a href="index.html" class="logo">LUXE</a>
+  <div class="checkout-steps">
+    <span class="step active">Delivery</span>
+    <span class="step-sep">›</span>
+    <span class="step">Payment</span>
+    <span class="step-sep">›</span>
+    <span class="step">Review</span>
+  </div>
+</nav>
+
+<div class="checkout-page">
+
+  <!-- FORM -->
+  <div class="checkout-form-wrap">
+    <h2 class="checkout-section-title">Delivery Details</h2>
+
+    <div class="form-row form-row--2">
+      <div class="field">
+        <label>First Name</label>
+        <input type="text" placeholder="Aanya">
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input type="text" placeholder="Sharma">
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Email Address</label>
+      <input type="email" placeholder="aanya@email.com">
+    </div>
+
+    <div class="field">
+      <label>Phone Number</label>
+      <input type="tel" placeholder="+91 98765 43210">
+    </div>
+
+    <div class="field">
+      <label>Address Line 1</label>
+      <input type="text" placeholder="Street address, apartment, flat">
+    </div>
+
+    <div class="field">
+      <label>Address Line 2 <span class="optional">(optional)</span></label>
+      <input type="text" placeholder="Landmark, area">
+    </div>
+
+    <div class="form-row form-row--3">
+      <div class="field">
+        <label>City</label>
+        <input type="text" placeholder="Mumbai">
+      </div>
+      <div class="field">
+        <label>State</label>
+        <select>
+          <option>Maharashtra</option>
+          <option>Delhi</option>
+          <option>Karnataka</option>
+          <option>Tamil Nadu</option>
+          <option>West Bengal</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>PIN Code</label>
+        <input type="text" placeholder="400001">
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 class="checkout-section-title">Payment</h2>
+
+    <div class="payment-methods">
+      <label class="payment-option active-pay">
+        <input type="radio" name="pay" checked> Credit / Debit Card
+      </label>
+      <label class="payment-option">
+        <input type="radio" name="pay"> UPI
+      </label>
+      <label class="payment-option">
+        <input type="radio" name="pay"> Net Banking
+      </label>
+      <label class="payment-option">
+        <input type="radio" name="pay"> Cash on Delivery
+      </label>
+    </div>
+
+    <div class="field">
+      <label>Card Number</label>
+      <input type="text" placeholder="•••• •••• •••• ••••">
+    </div>
+
+    <div class="form-row form-row--2">
+      <div class="field">
+        <label>Expiry</label>
+        <input type="text" placeholder="MM / YY">
+      </div>
+      <div class="field">
+        <label>CVV</label>
+        <input type="text" placeholder="•••">
+      </div>
+    </div>
+
+    <button class="btn-place-order" onclick="placeOrder()">Place Order — ₹21,490</button>
+
+    <p class="checkout-secure">🔒 &nbsp;Your payment information is encrypted and secure.</p>
+  </div>
+
+  <!-- ORDER SUMMARY SIDEBAR -->
+  <div class="checkout-summary">
+    <h2 class="checkout-section-title">Your Order</h2>
+
+    <div class="checkout-item">
+      <img src="https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=120&q=80" alt="">
+      <div>
+        <p class="checkout-item-name">Fluid Linen Blazer</p>
+        <p class="checkout-item-meta">Ecru / S</p>
+      </div>
+      <p class="checkout-item-price">₹8,990</p>
+    </div>
+
+    <div class="checkout-item">
+      <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=120&q=80" alt="">
+      <div>
+        <p class="checkout-item-name">Draped Silk Dress</p>
+        <p class="checkout-item-meta">Black / M</p>
+      </div>
+      <p class="checkout-item-price">₹12,500</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="summary-row"><span>Subtotal</span><span>₹21,490</span></div>
+    <div class="summary-row"><span>Shipping</span><span class="summary-free">Free</span></div>
+
+    <div class="divider"></div>
+
+    <div class="summary-row summary-row--total"><span>Total</span><span>₹21,490</span></div>
+  </div>
+
+</div>
+
+<script>
+function placeOrder() {
+  const btn = document.querySelector('.btn-place-order');
+  btn.textContent = 'Processing...';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = '✓ Order Placed!';
+    btn.style.background = '#1a1a1a';
+    btn.style.color = '#fff';
+  }, 1500);
+}
+document.querySelectorAll('.payment-option').forEach(opt => {
+  opt.addEventListener('click', () => {
+    document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('active-pay'));
+    opt.classList.add('active-pay');
+  });
+});
+</script>
+</body>
+</html>

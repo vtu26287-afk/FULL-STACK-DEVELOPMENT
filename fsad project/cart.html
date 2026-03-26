@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUXE — Your Cart</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-left">
+    <a href="#" class="nav-link">Women</a>
+    <a href="#" class="nav-link">Men</a>
+    <a href="#" class="nav-link">New In</a>
+  </div>
+  <a href="index.html" class="logo">LUXE</a>
+  <div class="nav-right">
+    <a href="login.html" class="nav-link">Account</a>
+    <a href="cart.html" class="nav-link nav-link--active">Cart (2)</a>
+  </div>
+</nav>
+
+<div class="cart-page">
+  <h1 class="cart-title">Your Cart</h1>
+
+  <div class="cart-layout">
+    <!-- ITEMS -->
+    <div class="cart-items">
+
+      <div class="cart-item">
+        <img src="https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=300&q=80" class="cart-item-img" alt="">
+        <div class="cart-item-info">
+          <p class="cart-item-name">Fluid Linen Blazer</p>
+          <p class="cart-item-meta">Ecru / Size S</p>
+          <p class="cart-item-price">₹8,990</p>
+          <div class="cart-qty">
+            <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
+            <span class="qty-val">1</span>
+            <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+          </div>
+        </div>
+        <button class="cart-remove" onclick="removeItem(this)">×</button>
+      </div>
+
+      <div class="cart-item">
+        <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=300&q=80" class="cart-item-img" alt="">
+        <div class="cart-item-info">
+          <p class="cart-item-name">Draped Silk Dress</p>
+          <p class="cart-item-meta">Black / Size M</p>
+          <p class="cart-item-price">₹12,500</p>
+          <div class="cart-qty">
+            <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
+            <span class="qty-val">1</span>
+            <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+          </div>
+        </div>
+        <button class="cart-remove" onclick="removeItem(this)">×</button>
+      </div>
+
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="cart-summary">
+      <h2 class="summary-title">Order Summary</h2>
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="subtotal">₹21,490</span>
+      </div>
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span class="summary-free">Free</span>
+      </div>
+      <div class="summary-row summary-row--promo">
+        <input type="text" class="promo-input" placeholder="Promo code">
+        <button class="promo-btn">Apply</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="summary-row summary-row--total">
+        <span>Total</span>
+        <span id="total">₹21,490</span>
+      </div>
+
+      <p class="summary-tax">Including taxes</p>
+
+      <a href="checkout.html" class="btn-checkout">Proceed to Checkout</a>
+      <a href="listing.html" class="continue-shopping">← Continue Shopping</a>
+
+      <div class="secure-note">
+        <span>🔒</span> Secure checkout — SSL encrypted
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <p class="footer-brand">LUXE</p>
+      <p class="footer-desc">Elevated essentials for the modern wardrobe.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Shop</p>
+      <a href="#">Women</a><a href="#">Men</a><a href="#">New In</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Help</p>
+      <a href="#">Shipping</a><a href="#">Returns</a><a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 LUXE</p></div>
+</footer>
+
+<script>
+function changeQty(btn, delta) {
+  const val = btn.parentElement.querySelector('.qty-val');
+  let n = parseInt(val.textContent) + delta;
+  if (n < 1) n = 1;
+  val.textContent = n;
+}
+function removeItem(btn) {
+  btn.closest('.cart-item').style.opacity = '0';
+  setTimeout(() => btn.closest('.cart-item').remove(), 300);
+}
+</script>
+</body>
+</html>

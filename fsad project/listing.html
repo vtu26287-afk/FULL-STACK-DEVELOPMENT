@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUXE — Women</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-left">
+    <a href="#" class="nav-link nav-link--active">Women</a>
+    <a href="#" class="nav-link">Men</a>
+    <a href="#" class="nav-link">New In</a>
+  </div>
+  <a href="index.html" class="logo">LUXE</a>
+  <div class="nav-right">
+    <a href="login.html" class="nav-link">Account</a>
+    <a href="cart.html" class="nav-link">Cart (0)</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <h1 class="page-title">Women</h1>
+  <p class="page-count">128 pieces</p>
+</div>
+
+<!-- LISTING LAYOUT -->
+<div class="listing-layout">
+
+  <!-- SIDEBAR FILTER -->
+  <aside class="sidebar">
+    <div class="filter-group">
+      <button class="filter-toggle" onclick="this.parentElement.classList.toggle('open')">
+        Category <span class="toggle-icon">+</span>
+      </button>
+      <div class="filter-options">
+        <label class="filter-option"><input type="checkbox"> Dresses</label>
+        <label class="filter-option"><input type="checkbox"> Tops</label>
+        <label class="filter-option"><input type="checkbox"> Trousers</label>
+        <label class="filter-option"><input type="checkbox"> Outerwear</label>
+        <label class="filter-option"><input type="checkbox"> Knitwear</label>
+        <label class="filter-option"><input type="checkbox"> Accessories</label>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <button class="filter-toggle" onclick="this.parentElement.classList.toggle('open')">
+        Size <span class="toggle-icon">+</span>
+      </button>
+      <div class="filter-options">
+        <div class="size-grid">
+          <button class="size-btn">XS</button>
+          <button class="size-btn">S</button>
+          <button class="size-btn active">M</button>
+          <button class="size-btn">L</button>
+          <button class="size-btn">XL</button>
+          <button class="size-btn">XXL</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <button class="filter-toggle" onclick="this.parentElement.classList.toggle('open')">
+        Price <span class="toggle-icon">+</span>
+      </button>
+      <div class="filter-options">
+        <label class="filter-option"><input type="checkbox"> Under ₹5,000</label>
+        <label class="filter-option"><input type="checkbox"> ₹5,000 – ₹10,000</label>
+        <label class="filter-option"><input type="checkbox"> ₹10,000 – ₹20,000</label>
+        <label class="filter-option"><input type="checkbox"> Over ₹20,000</label>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <button class="filter-toggle" onclick="this.parentElement.classList.toggle('open')">
+        Colour <span class="toggle-icon">+</span>
+      </button>
+      <div class="filter-options">
+        <div class="color-swatches">
+          <button class="swatch" style="background:#1a1a1a" title="Black"></button>
+          <button class="swatch" style="background:#ffffff;border:1px solid #ddd" title="White"></button>
+          <button class="swatch" style="background:#c8beb2" title="Ecru"></button>
+          <button class="swatch" style="background:#7a6a5a" title="Camel"></button>
+          <button class="swatch" style="background:#4a4a5a" title="Navy"></button>
+          <button class="swatch" style="background:#c2533a" title="Terracotta"></button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- PRODUCTS -->
+  <div class="listing-main">
+    <div class="listing-toolbar">
+      <span class="listing-sort-label">Sort by:</span>
+      <select class="listing-sort">
+        <option>Featured</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        <option>New Arrivals</option>
+      </select>
+    </div>
+
+    <div class="products-grid products-grid--listing">
+      <a href="product.html" class="product-card">
+        <div class="product-img-wrap">
+          <img class="img-main" src="https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=600&q=80" alt="">
+          <img class="img-hover" src="https://images.unsplash.com/photo-1571513800374-df1bbe650e56?w=600&q=80" alt="">
+          <button class="quick-view">Quick View</button>
+          <span class="badge">New</span>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Fluid Linen Blazer</p>
+          <p class="product-price">₹8,990</p>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <div class="product-img-wrap">
+          <img class="img-main" src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=600&q=80" alt="">
+          <img class="img-hover" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="">
+          <button class="quick-view">Quick View</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Draped Silk Dress</p>
+          <p class="product-price">₹12,500</p>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <div class="product-img-wrap">
+          <img class="img-main" src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&q=80" alt="">
+          <img class="img-hover" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80" alt="">
+          <button class="quick-view">Quick View</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Structured Wool Coat</p>
+          <p class="product-price">₹22,000</p>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <div class="product-img-wrap">
+          <img class="img-main" src="https://images.unsplash.com/photo-1566206091558-7f218b696731?w=600&q=80" alt="">
+          <img class="img-hover" src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80" alt="">
+          <button class="quick-view">Quick View</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Tapered Trousers</p>
+          <p class="product-price">₹5,990</p>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <div class="product-img-wrap">
+          <img class="img-main" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80" alt="">
+          <img class="img-hover" src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&q=80" alt="">
+          <button class="quick-view">Quick View</button>
+          <span class="badge">New</span>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Open-Back Linen Top</p>
+          <p class="product-price">₹4,490</p>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <div class="product-img-wrap">
+          <img class="img-main" src="https://images.unsplash.com/photo-1521577352947-9bb58764b69a?w=600&q=80" alt="">
+          <img class="img-hover" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80" alt="">
+          <button class="quick-view">Quick View</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Pleated Midi Skirt</p>
+          <p class="product-price">₹6,990</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <p class="footer-brand">LUXE</p>
+      <p class="footer-desc">Elevated essentials for the modern wardrobe.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Shop</p>
+      <a href="#">Women</a><a href="#">Men</a><a href="#">New In</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Help</p>
+      <a href="#">Shipping</a><a href="#">Returns</a><a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 LUXE</p></div>
+</footer>
+
+<script>
+document.querySelectorAll('.filter-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const icon = btn.querySelector('.toggle-icon');
+    icon.textContent = btn.parentElement.classList.contains('open') ? '+' : '−';
+  });
+});
+document.querySelectorAll('.size-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
